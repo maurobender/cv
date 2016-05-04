@@ -21,9 +21,9 @@
 \firstname{Mauro Ezequiel}
 \familyname{\\ \\Bender}
 \title{Curriculum Vitae}               % optional, remove the line if not wanted
-\address{Dragones 2717, Gonzalez Catan}{1759 Buenos Aires, Argentina}    % optional, remove the line if not wanted
+\address{Av. Corrientes 4014, C.A.B.A.}{1194 Buenos Aires, Argentina}    % optional, remove the line if not wanted
 \mobile{+54 11 3911 4033}                    % optional, remove the line if not wanted
-\phone{+54 11 2005 0307}                      % optional, remove the line if not wanted
+%\phone{+54 11 2005 0307}                      % optional, remove the line if not wanted
 %\fax{312 996 1491}                          % optional, remove the line if not wanted
 \email{maurobender@gmail.com}                      % optional, remove the line if not wanted
 %\extrainfo{additional information (optional)} % optional, remove the line if not wanted
@@ -37,6 +37,13 @@
 \begin{document}
 \maketitle
 
+\newcommand{\codelangs}[1]{\vspace{-2mm}{\scriptsize \color{gray} #1 \endgraf \vspace{1mm}}}
+
+\newenvironment{projects}
+{ \vspace{2mm }\begin{itemize} }
+{ \end{itemize} }
+\newcommand{\project}[4]{\vspace{1mm} \item \href{#2}{\textbf{#1}}\\#3\\{\small \color{gray}#4} \vspace{2mm}}
+
 \vspace{-10mm}
 
 %Section
@@ -44,23 +51,14 @@
 \cvcomputer{Born}{\small January 16th, 1988 at Buenos Aires (Argentina)\normalsize}{Citizenship}{\small Argentine\normalsize}
 \cvcomputer{LinkedIn}{\small \url{http://ar.linkedin.com/in/maurobender}\normalsize}{Skype}{\small mauro.bender}
 
-\vspace{-4mm}
+\vspace{-1mm}
 
 %Section
-\section{Desidered Employment}
-\cvline{}{\Large Frotend/Backend Web Developer}
-\cvline{}{\small Over the years, working as a web developer I have developed a fascination and a kind of ``love'' for web technologies.
-I love facing to new challenges using modern technologies and techiniques to solve them. I'm looking for a job which allows me to keep learning
-about new techonologies and where I can apply my current knowledge.
-}
-
-\vspace{-4mm}
-
-%Section
-\section{Computer Skills} 
-\cvline{Languages}{\small JAVA, JavaScript, C, C++, SQL, PHP, HTML5, CSS3, LESS, PYTHON, BASH, \LaTeX, Doxygen, Qt, Gtk}
-\cvcomputer{Platforms}{Unix, Linux, Windows, Apache, Node.js}  {DB}{MySQL, PostgrSQL}
-\cvline{Tools}{Eclipse IDE, Netbeans IDE, CMAKE Build system, ANT Build system, Git, SVN, AJAX, jQuery, JSON, Office Suite, Photoshop, Gimp}
+\section{Computer Skills}
+\cvline{Languages}{\small Objective-C, Swift, Ruby, JAVA, JavaScript, C, C++, SQL, PHP, HTML5, CSS3, LESS, PYTHON, BASH, \LaTeX, Doxygen, Qt, Gtk}
+\cvcomputer{Platforms}{Unix, Linux, MacOs X, Windows, Apache}  {DB}{MySQL, PostgrSQL}
+\cvline{Frameworks}{Ruby on Rails, Cocoa Touch, jQuery}
+\cvline{Tools}{XCode, Fastlane, Git, SVN, AJAX, GitLab}
 
 \vspace{-3mm}
 
@@ -68,7 +66,21 @@ about new techonologies and where I can apply my current knowledge.
 \section{Experience}
 \vspace{-2mm}
 \subsection{Working}
-\cventry{2009-Now}{Web Developer}{\href{http://www.insite-la.com/}{Insite}}{Buenos Aires}{Argentina}{
+\cventry{2014-Now}{Sr. iOS Developer}{\href{http://www.theamalgama.com/}{Amalgama}}{Buenos Aires}{Argentina}{
+In charge of the iOS area of the company. Develop several applications in Objective-C and Swift using Agile methodologies:
+\begin{projects}
+	\project{Previando}{http://previando.com.ar}{Previando is a mobile application to help previas find and connect with other previas near them.\
+	The application was develop in Objective-C, connecting to a RoR REST api.}{\href{https://itunes.apple.com/us/app/previando/id978109047}{AppStore}}
+	\project{Vidbead}{http://vidbead.com}{Vidbead is a social network to share videos with your friends and reply to them also with videos,\
+	creating then a sort of video-story. Vidbead was develop using Objective-C, connecting to a RoR REST api.}
+	{\href{https://itunes.apple.com/app/id954906786}{AppStore}}
+	\project{Dispatch}{http://grabdispatch.com}{Dispatch is a mobile application to help users of Milwaukee improve how they experience their neighborhoods\
+	by offering information about business, events and promotions near them. Dispatch was develop using Objective-C, connecting\
+	to a RoR REST api.}{\href{https://itunes.apple.com/us/app/grab-dispatch/id941630869}{AppStore}}
+\end{projects}
+}
+
+\cventry{2009-2014}{Web Developer}{\href{http://www.insite-la.com/}{Insite}}{Buenos Aires}{Argentina}{
 Backend and frontend developer in PHP/JavaSCript.
 \begin{itemize} \itemsep -2pt % reduce space between items
 	\item Development of several websites for clients like HP, P\&G and 3M. Of these sites we can remark:
@@ -86,13 +98,10 @@ Backend and frontend developer in PHP/JavaSCript.
 	PHP, MySQL, Java (Struts) and PostgreSQL.
 \end{itemize}
 }
+
 \subsection{Freelance}
-\cventry{2013}{Frontend Developer}{\href{http://cianativa.com.ar/}{Compañía Nativa}}{}{}{
-Simple website (HTML/CSS/JS) based in a full width slider to show the comapny's products.
-}
-\cventry{2013}{Web Developer \& Co-Founder}{\href{http://www.vitbok.com}{Vitbok}}{}{}{
-Vitbok is a social network based in the idea of recreate a person's personal diary. In Vitbok you can share your ``day by day'' an then, afterwards, return and remember what you did that day.
-You can also post pictures and postits on your diary's page, dragging them to wherever you want. The postits are also helpful as reminders of future appointments.
+\cventry{2014-2015}{Backend/Frontend Web Developer}{\href{http://ibermusicas.org}{Ibermúsicas}}{}{}{
+\codelangs{Ruby on Rails, HTML, CSS, Javascript}Backend and Frontend development for the new Ibermúsicas website. Ibermúsicas is a program to promote iberoamérica cultura thourgh music and arts.
 }
 
 \subsection{Other}
@@ -101,9 +110,12 @@ Vitbok is a social network based in the idea of recreate a person's personal dia
 You can also post pictures and postits on your diary's page, dragging them to wherever you want. The postits are also helpful as reminders of future appointments.
 }
 
+\subsection{Other projects}
+\cvline{GitHub}{You can find some of my other projects in my GitHub profile: \href{https://github.com/maurobender}{\underline{maurobender}}.}
+
 %Section
 \section{Education}
-\cventry{2006-}{Licentiate in Computer Science}{\href{http://dc.uba.ar/}{Universidad de Buenos Aires}}{Buenos Aires}{Argentina}{}  
+\cventry{2006-}{Licentiate in Computer Science}{\href{http://dc.uba.ar/}{Universidad de Buenos Aires}}{Buenos Aires}{Argentina}{}
 \cventry{2002-2005}{Electronic Technician high school Diploma}{E.E.T Nº 6}{Buenos Aires}{Argentina}{}
 
 \vspace{-3mm}
@@ -116,15 +128,15 @@ You can also post pictures and postits on your diary's page, dragging them to wh
 
 % \hspace{25mm}\small  Self-assessment European level \href{http://europass.cedefop.europa.eu/en/resources/european-language-levels-cefr}{CEFR} (C2 maximum evaluation)\normalsize
 % \vspace{5mm}
-% 
+%
 % \begin{tabular}{p{67mm} p{40mm} p{40mm} p{20mm}}
 % & \textbf{Comprehension} & \textbf{Speaking} & \textbf{Writing} \\
 % \end{tabular}
-% 
+%
 % \begin{tabular}{p{67mm} p{20mm} p{20mm} p{20mm} p{20mm} p{20mm}}
 % & Listening & Reading & Interaction & Production & \\
 % \end{tabular}
-% 
+%
 % \vspace{3mm}
 % \cvlanguage{Italian}{Mother Tongue}{
 % 	\begin{tabular}{ p{20mm} p{20mm} p{20mm} p{20mm} p{21mm}}
@@ -145,7 +157,7 @@ You can also post pictures and postits on your diary's page, dragging them to wh
 % \cvline{}{\small I love any sport but I prefer Basketball and Ping Pong. I enjoy reading technical and classic literature books but I don't mind psychology and novels either. I love fishing and diving even if I don't practice really often that activities unfortunately.}
 
 % \vspace{-3mm}
-% 
+%
 % %Section
 % \section{Extra}
 % \small
