@@ -1,0 +1,132 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[orange]{classic}                % idem
+
+\usepackage[T1]{fontenc}
+% character encoding
+\usepackage[utf8x]{inputenc}                   % replace by the encoding you are using
+\usepackage[spanish]{babel}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\recomputelengths                             % required when changes are made to page layout lengths
+
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LE,RO]{\thepage}           % page number in "outer" position of footer line
+\fancyfoot[RE,LO]{\footnotesize } % other info in "inner" position of footer line
+
+% personal data
+\firstname{Mauro Ezequiel}
+\familyname{\\ \\Bender}
+\title{Curriculum Vitae}               % optional, remove the line if not wanted
+\address{Av. Corrientes 4014, C.A.B.A.}{1194 Buenos Aires, Argentina}    % optional, remove the line if not wanted
+%\mobile{1139114033}                    % optional, remove the line if not wanted
+% \phone{11 2005 0307}                      % optional, remove the line if not wanted
+%\fax{312 996 1491}                          % optional, remove the line if not wanted
+\email{maurobender@gmail.com}                      % optional, remove the line if not wanted
+\extrainfo{Tel\'efono: 11 3911 4033} % optional, remove the line if not wanted
+\photo[84pt]{yo.jpg}          % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+
+% \quote{"Success is the ability to go from failure to failure without losing your enthusiasm." -- Winston Churchill}                 % optional, remove the line if not wanted
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\newcommand{\codelangs}[1]{\vspace{-2mm}{\scriptsize \color{gray} #1 \endgraf \vspace{1mm}}}
+
+\newenvironment{projects}
+{ \vspace{2mm }\begin{itemize} }
+{ \end{itemize} }
+\newcommand{\project}[4]{\vspace{1mm} \item \href{#2}{\textbf{#1}}\\#3\\{\small \color{gray}#4} \vspace{2mm}}
+
+\vspace{-10mm}
+
+%Section
+\section{Informaci\'on}
+\cvcomputer{Fecha de nacimiento}{\small 16 de Enero de 1988 \normalsize}{Nacionalidad}{\small Argentino\normalsize}
+\cvcomputer{LinkedIn}{\small \url{http://ar.linkedin.com/in/maurobender}\normalsize}{Skype}{\small mauro.bender}
+
+\vspace{-1mm}
+
+%Section
+\section{Conocimientos}
+\cvline{Lenguajes de programación}{\small Objective-C, Swift, Ruby, JAVA, JavaScript, C, C++, SQL, PHP, HTML5, CSS3, LESS, PYTHON, BASH, \LaTeX, Doxygen, Qt, Gtk}
+\cvcomputer{Plataformas}{Unix, Linux, MacOs X, Windows, Apache}  {DB}{MySQL, PostgrSQL}
+\cvline{Librerías}{Ruby on Rails, Cocoa Touch, jQuery}
+\cvline{Herramientas}{XCode, Fastlane, Git, SVN, AJAX, GitLab}
+
+\vspace{-3mm}
+
+%Section
+\section{Experiencia}
+\vspace{-2mm}
+\subsection{Trabajo}
+\cventry{2014-Actualidad}{Sr. iOS Developer}{\href{http://www.theamalgama.com/}{Amalgama}}{Buenos Aires}{Argentina}{
+A cargo del \'area de desarrollo de aplicaciones m\'oviles en iOS de la compa\~nia. Desarrollo de varias aplicaciones en Objective-C y Swift usando
+metodolog\'ias \'Agiles:
+\begin{projects}
+	\project{Previando}{http://previando.com.ar}{Previando es una aplicaci\'on m\'ovil para ayudar a conectar previas cercanas entre s\'i.\
+	La aplicaci\'on se desarroll\'o en Objective-C, consumiendo una API REST desarrollada en RoR.}{\href{https://itunes.apple.com/us/app/previando/id978109047}{AppStore}}
+	\project{Vidbead}{http://vidbead.com}{Vidbead es una red social en la cual los usuarios puede compartir videos con sus amigos y ellos\
+	pueden responder con otro video, formando as\'i una video-historia. Vidbead fue desarrollada usando Objective-C, consumiendo una API REST en RoR.}
+	{\href{https://itunes.apple.com/app/id954906786}{AppStore}}
+	\project{Dispatch}{http://grabdispatch.com}{Dispatch es una aplicaci\'on m\'ovil para ayudar a las personas de Milwaukee\
+	a mejorar su experiencia en sus barrios ofreciendo informaci\'on sobre negocios, eventos y promociones cerca de ellos\
+	Dispatch fue desarralloda en Objective-C, consumiendo una API REST en RoR.}{\href{https://itunes.apple.com/us/app/grab-dispatch/id941630869}{AppStore}}
+\end{projects}
+}
+
+\cventry{2010-2014}{Desarrollador Web}{\href{http://www.insite-la.com/}{Insite}}{Buenos Aires}{Argentina}{
+Desarrollador de Frontend/Backend en PHP/JavaScript.
+\begin{itemize} \itemsep -2pt % reduce space between items
+	\item Desarrollo de varios sitios web para clientes como HP, P\&G y 3M. Algunos de los desarrollos realizados:
+	\begin{itemize} \itemsep -2pt % reduce space between items
+		\item Mantenimiento de los sitios de HP Argentina y del e-Store de HP Latam (agregado funcionalidades, correciones de bugs).
+		\item Desarrollo de una red social para 3M  usando PHP (CakePHP Framework)
+		con MySQL comom motor de base de datos: \url{http://www.espertiseclub.com}.
+		\item Desarrollo de un sitio web para odont\'ologos, auxiliares y estudiantes de ondotlog\'ia para 3M
+		Colombia usando PHP (CakePHP Framework) con MySQL: \url{http://www.esperiencias.com.co}.
+		\item Desarrollo y mantenimiento del e-Store online de 3M Colombia (Compra3M) usando PHP (Yii Framework)
+		y MySQL: \url{http://www.compra3m.com.co}. Tuve que desarrollar diversos m\'odulos para extender Yii como
+		un m\'odulo de carrito, un m\'odulo de checkout, un m\'odulo FTP para sincronizar stock y pedidos, etc.
+	\end{itemize}
+	\item Mantenimiento y actualización de diversos sitios ya existentes desarrollados en varis tecnolog\'ias diferentes como
+	PHP, MySQL, Java (Struts) y PostgreSQL.
+\end{itemize}
+}
+
+\subsection{Freelance}
+\cventry{2014-2015}{Desarrollador Web de Backend/Frontend}{\href{http://ibermusicas.org}{Ibermúsicas}}{}{}{
+\codelangs{Ruby on Rails, HTML, CSS, Javascript}Desarrollo del Backend y Frontend para el nuevo sitio web de Ibermúsicas.
+ Ibermúsicas es un programa para promover la cultura iberoam\'ericana a trav\'es de la m\'usica y el arte.
+}
+
+\subsection{Otro}
+\cventry{2011-2012}{Desarrollador Web \& Co-Founder}{\href{http://www.vitbok.com}{Vitbok}}{}{}{
+Vitbok es una red social basada en la idea de recrear un diario personal. En Vitbok un uusario puede compartir su ``d\'ia a d\'ia'' y luego
+volver y recordar todas las cosas que hizo ese d\'ia.
+}
+
+\subsection{Other projects}
+\cvline{GitHub}{Algunos de mis otros proyectos personales pueden ser encontrados en mi perfil de GitHub: \href{https://github.com/maurobender}{\underline{maurobender}}.}
+
+%Section
+\section{Education}
+\cventry{2007-}{Licanciado en Ciencias de la Computaci\'on}{\href{http://dc.uba.ar/}{Universidad de Buenos Aires}}{Buenos Aires}{Argentina}{}
+\cventry{2002-2005}{T\'ecnico en Electr\'onica}{E.E.T Nº 6}{Buenos Aires}{Argentina}{}
+
+\vspace{-3mm}
+
+%Section
+\section{Languages}
+\cvlanguage{Espa\~nol}{Nativo}{}
+\cvlanguage{Ingl\'es}{Avanzado}{}
+\cvlanguage{Franc\'es}{Inicial}{}
+
+
+\end{document}
